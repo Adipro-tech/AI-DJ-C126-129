@@ -21,12 +21,17 @@ function draw()
     image(video, 0,0, 600,500);
     fill("#00ffcc");
     stroke("#134239");
+    if(scoreLeftWrist > 0.2)
+    {
+
+    
     circle(leftWristX, leftWristY, 20);
     numY = Number(leftWristY);
     remove_decimal = floor(numY);
     volume = remove_decimal/500;
     document.getElementById("volume").innerHTML = "Volume = " + volume;
-    song.setVolume(volume);    
+    song.setVolume(volume); 
+    }   
 }
 
 function preload()
